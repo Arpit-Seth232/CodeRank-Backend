@@ -7,7 +7,7 @@ export const otp = t.pgTable('otp', {
     .varchar('userId', { length: 256 })
     .references(() => users.id)
     .primaryKey(),
-  otp: t.varchar('otp', { length: 256 }),
-  updated_at: t.timestamp('created_at').defaultNow(),
-  created_at: t.timestamp('updated_at').defaultNow().notNull(),
+  userOtp: t.varchar('user_otp', { length: 256 }),
+  updated_at: t.timestamp('updated_at').defaultNow(),
+  created_at: t.timestamp('created_at').defaultNow().notNull(),
 });
