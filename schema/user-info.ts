@@ -2,7 +2,7 @@ import * as t from 'drizzle-orm/pg-core';
 
 import { users } from './user';
 
-export const user_info = t.pgTable('user_info', {
+export const userInfo = t.pgTable('user_info', {
   userId: t
     .varchar('user_id', { length: 256 })
     .references(() => users.id)
