@@ -4,7 +4,7 @@ import { users } from './user';
 
 export const otp = t.pgTable('otp', {
   userId: t
-    .varchar('userId', { length: 256 })
+    .varchar('user_id', { length: 256 })
     .references(() => users.id)
     .primaryKey(),
   userOtp: t.varchar('user_otp', { length: 256 }),
